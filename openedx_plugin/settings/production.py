@@ -4,6 +4,9 @@ Common Pluggable Django App settings
 #from path import Path as path
 import environ
 import os
+import logging
+
+log = logging.getLogger(__name__)
 
 # cast anything that doesn't have to flow via CI
 # Note: this is for local development. On K8S these settings
@@ -40,6 +43,9 @@ def plugin_settings(settings):
     """
     Injects local settings into django settings
     """
+    
+    log.info("openedx_plugin.settings.production.py - plugin_settings()")
+
     settings.BADGR_ISSUER_SLUG = _BADGR_ISSUER_SLUG
     settings.BADGR_BASE_URL = _BADGR_BASE_URL
     settings.BADGR_USERNAME = _BADGR_USERNAME
