@@ -26,11 +26,11 @@ DEBUG = env("DEBUG")
 
 # Raises Django's ImproperlyConfigured
 # exception if any of these params are not in os.environ
-_BADGR_ISSUER_SLUG = env("BADGR_ISSUER_SLUG"),
-_BADGR_BASE_URL = env("BADGR_BASE_URL"),
-_BADGR_USERNAME = env("BADGR_USERNAME"),
-_BADGR_PASSWORD = env("BADGR_PASSWORD"),
-_BADGR_TOKENS_CACHE_KEY = env("BADGR_TOKENS_CACHE_KEY"),
+_BADGR_ISSUER_SLUG = env("BADGR_ISSUER_SLUG")
+_BADGR_BASE_URL = env("BADGR_BASE_URL")
+_BADGR_USERNAME = env("BADGR_USERNAME")
+_BADGR_PASSWORD = env("BADGR_PASSWORD")
+_BADGR_TOKENS_CACHE_KEY = env("BADGR_TOKENS_CACHE_KEY")
 
 # django stuff
 from ..waffle import waffle_switches, OVERRIDE_OPENEDX_DJANGO_LOGIN
